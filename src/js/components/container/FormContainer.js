@@ -5,7 +5,7 @@ import Input from "../presentational/Input";
 class FormContainer extends Component {
     constructor() {
         super();
-        this.stte = {
+        this.state = {
             seo_title: ""
         };
         this.handleChange = this.handleChange.bind(this);
@@ -33,3 +33,6 @@ class FormContainer extends Component {
 }
 
 export default FormContainer;
+
+const wrapper = document.getElementById("create-article-form");
+wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
